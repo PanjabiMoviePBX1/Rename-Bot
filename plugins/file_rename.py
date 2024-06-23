@@ -15,7 +15,7 @@ import os, time
 async def rename_start(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name  
-    if file.file_size > 2000 * 1024 * 1024:
+    if file.file_size > 4000 * 2048 * 2048:
          return await message.reply_text("Sorry Bro This Bot Doesn't Support Uploading Files Bigger Than 2GB")
 
     try:
@@ -99,7 +99,7 @@ async def doc(bot, update):
     file_path = f"downloads/{new_filename}"
     file = update.message.reply_to_message
 
-    ms = await update.message.edit("𝗣𝗮𝗻𝗱𝗮𝗪𝗲𝗽 𝗧𝗿𝘆𝗶𝗻𝗴 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴")    
+    ms = await update.message.edit("𝗣𝗕𝗫𝟭 𝗧𝗿𝘆𝗶𝗻𝗴 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴")    
     try:
      	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("𝗣𝗮𝗻𝗱𝗮𝗪𝗲𝗽 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗦𝘁𝗮𝗿𝘁𝗲𝗱｡｡｡｡", ms, time.time()))                    
     except Exception as e:
@@ -136,7 +136,7 @@ async def doc(bot, update):
          img.resize((320, 320))
          img.save(ph_path, "JPEG")
 
-    await ms.edit("𝗣𝗮𝗻𝗱𝗮𝗪𝗲𝗽 𝗧𝗿𝘆𝗶𝗻𝗴 𝗧𝗼 𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴")
+    await ms.edit("𝗣𝗕𝗫𝟭 𝗧𝗿𝘆𝗶𝗻𝗴 𝗧𝗼 𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴")
     type = update.data.split("_")[1]
     try:
         if type == "document":
