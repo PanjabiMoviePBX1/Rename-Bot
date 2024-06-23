@@ -93,7 +93,7 @@ async def doc(bot, update):
         else:
             new_filename = new_filename_
     except:
-        await update.message.edit("⚠️ Something Went Wrong Can't Able To Set Prefix Or Suffix ☹️ \n\n**Contact My Creator** : @PandaWep")
+        await update.message.edit("⚠️ Something Went Wrong Can't Able To Set Prefix Or Suffix ☹️ \n\n**Contact My Creator** : @PBX1_OP")
     
         
     file_path = f"downloads/{new_filename}"
@@ -101,7 +101,7 @@ async def doc(bot, update):
 
     ms = await update.message.edit("𝗣𝗕𝗫𝟭 𝗧𝗿𝘆𝗶𝗻𝗴 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴")    
     try:
-     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("𝗣𝗮𝗻𝗱𝗮𝗪𝗲𝗽 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗦𝘁𝗮𝗿𝘁𝗲𝗱｡｡｡｡", ms, time.time()))                    
+     	path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram,progress_args=("𝗣𝗕𝗫𝟭 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗦𝘁𝗮𝗿𝘁𝗲𝗱｡｡｡｡", ms, time.time()))                    
     except Exception as e:
      	return await ms.edit(e)
      	     
